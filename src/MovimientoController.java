@@ -20,7 +20,7 @@ public class MovimientoController {
      *
      * @param connection La conexión a la base de datos que se utilizará en el controlador.
      */
-    public MovimientoController(Connection connection) {
+    MovimientoController(Connection connection) {
         this.connection = connection;
     }
 

@@ -23,7 +23,7 @@ public class PokemonController {
      *
      * @param connection Conexión a la base de datos.
      */
-    public PokemonController(Connection connection) {
+    PokemonController(Connection connection) {
         this.connection = connection;
     }
 
@@ -33,7 +33,7 @@ public class PokemonController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema de entrada/salida.
      */
-    public void vistaPokemon() throws SQLException, IOException {
+    void vistaPokemon() throws SQLException, IOException {
 
         // Crear una declaración para ejecutar la consulta SQL
         Statement st = connection.createStatement();
@@ -75,7 +75,7 @@ public class PokemonController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema de entrada/salida.
      */
-    public void vistaPokemon(int opcion) throws SQLException, IOException {
+    void vistaPokemon(int opcion) throws SQLException, IOException {
 
         Statement st = connection.createStatement();
         ResultSet rs;
@@ -199,7 +199,7 @@ public class PokemonController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema de entrada/salida.
      */
-    public void filtroNombre() throws SQLException, IOException {
+    void filtroNombre() throws SQLException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Cuál es el nombre que quieres usar de filtro?");
         String nombre = br.readLine();
@@ -235,7 +235,7 @@ public class PokemonController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema de entrada/salida.
      */
-    public void purgaTipos() throws SQLException, IOException {
+    void purgaTipos() throws SQLException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("¿Cuál es el tipo que quieres purgar?");
         String tipo = br.readLine();
@@ -252,7 +252,7 @@ public class PokemonController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema de entrada/salida.
      */
-    public void purgaNombre() throws SQLException, IOException {
+    void purgaNombre() throws SQLException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Cuál es el nombre que quieres usar de filtro?");
         String nombre = br.readLine();
@@ -268,7 +268,7 @@ public class PokemonController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema de entrada/salida.
      */
-    public void filtroStat() throws SQLException, IOException {
+    void filtroStat() throws SQLException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Cual es el stat que quieres usar de filtro?");
         String stat = br.readLine();
@@ -304,7 +304,7 @@ public class PokemonController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema de entrada/salida.
      */
-    public void addPokemon() throws SQLException, IOException {
+    void addPokemon() throws SQLException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

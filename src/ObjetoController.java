@@ -20,7 +20,7 @@ public class ObjetoController {
      *
      * @param connection Conexión a la base de datos.
      */
-    public ObjetoController(Connection connection) {
+    ObjetoController(Connection connection) {
         this.connection = connection;
     }
 
@@ -31,7 +31,7 @@ public class ObjetoController {
      * @throws IOException  Si hay un problema al leer desde la entrada estándar.
      */
 
-    public void vistaObjeto() throws SQLException, IOException {
+    void vistaObjeto() throws SQLException, IOException {
         Statement st = connection.createStatement();
         ResultSet rs;
 
@@ -54,7 +54,7 @@ public class ObjetoController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema al leer desde la entrada estándar.
      */
-    public void addObjeto() throws SQLException, IOException {
+    void addObjeto() throws SQLException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -140,7 +140,7 @@ public class ObjetoController {
      * @throws SQLException Si hay un problema al ejecutar la consulta SQL.
      * @throws IOException  Si hay un problema al leer desde la entrada estándar.
      */
-    public void actualizarPrecioObjetos() throws SQLException, IOException {
+    void actualizarPrecioObjetos() throws SQLException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Ingresa la primera cifra para filtrar objetos por precio: ");
